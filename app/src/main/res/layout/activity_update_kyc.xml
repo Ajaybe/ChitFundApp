@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/tool_bar">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_personal_dtl"
+                app:title="Update KYC"
+                app:titleTextColor="@android:color/white"
+                app:navigationIcon="@drawable/ic_arrow_white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </com.google.android.material.appbar.AppBarLayout>
+    </LinearLayout>
+
+
+
+
+<ScrollView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".View.UpdateKYCActivity">
+
+
+    <LinearLayout
+        tools:ignore="HardcodedText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:text="Salutation"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_weight="2"
+                android:background="@drawable/ic_field_background"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:text="Name"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:autofillHints="Name"
+                android:background="@drawable/ic_field_background"
+                android:drawablePadding="12dp"
+                android:gravity="start"
+                android:hint="Name"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:text="S/o, W/o, D/o"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/et_relation"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:autofillHints="Name"
+                android:background="@drawable/ic_field_background"
+                android:drawablePadding="12dp"
+                android:gravity="start"
+                android:hint="S/o, W/o, D/o"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:text="Date of Birth"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/et_dob"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:autofillHints="Name"
+                android:background="@drawable/ic_field_background"
+                android:drawablePadding="12dp"
+                android:gravity="start"
+                android:hint="dd/mm/yyyy"
+                android:inputType="date"
+                android:maxLines="1"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:text="Age"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_age"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:background="@drawable/ic_field_background"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:text="Marital Status"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+            <Spinner
+                android:id="@+id/spinner_mar"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_weight="2"
+                android:background="@drawable/ic_field_background"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutAnniversary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:text="Anniversary"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/et_anniversary"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:autofillHints="Name"
+                android:background="@drawable/ic_field_background"
+                android:drawablePadding="12dp"
+                android:gravity="start"
+                android:hint="dd/mm/yyyy"
+                android:inputType="date"
+                android:maxLines="1"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:text="Email Id"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:autofillHints="Name"
+                android:background="@drawable/ic_field_background"
+                android:drawablePadding="12dp"
+                android:gravity="start"
+                android:hint="Email Id"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:text="Mobile Number"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/et_mobile"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:autofillHints="Name"
+                android:background="@drawable/ic_field_background"
+                android:drawablePadding="12dp"
+                android:gravity="start"
+                android:hint="Mobile Number"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:maxLines="1"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:text="Alternate Number"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/et_altMobile"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:autofillHints="Name"
+                android:background="@drawable/ic_field_background"
+                android:drawablePadding="12dp"
+                android:gravity="start"
+                android:hint="Alternate Number"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:maxLines="1"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:text="Aadhar Number"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/et_aadhar"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:autofillHints="Name"
+                android:background="@drawable/ic_field_background"
+                android:drawablePadding="12dp"
+                android:gravity="start"
+                android:hint="Aadhar Numb"
+                android:inputType="text"
+                android:maxLength="12"
+                android:maxLines="1"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:text="Pan Number"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/et_pan"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:autofillHints="Name"
+                android:background="@drawable/ic_field_background"
+                android:drawablePadding="12dp"
+                android:gravity="start"
+                android:hint="Pan Numb"
+                android:inputType="text"
+                android:maxLength="12"
+                android:maxLines="1"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp">
+
+            <Button
+                android:id="@+id/btn_filePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#AAAA"
+                android:textColor="@color/black"
+                android:text="Select Photo"/>
+
+            <TextView
+                android:id="@+id/filePath"
+                android:text="No File chosen"
+                android:textSize="16sp"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:background="@drawable/ic_field_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_saveMemDtl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:textAllCaps="false"
+            android:background="@drawable/ic_button_background"
+            android:layout_gravity="right"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/tool_bar">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_personal_dtl"
+                app:title="Personal Details"
+                app:titleTextColor="@android:color/white"
+                app:navigationIcon="@drawable/ic_arrow_white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </com.google.android.material.appbar.AppBarLayout>
+    </LinearLayout>
+
+
+
+
+    <ScrollView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".View.PersonalDetails">
+
+
+        <LinearLayout
+            tools:ignore="HardcodedText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:text="Mobile Number"
+                    android:textSize="16sp"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:layout_gravity="center"
+                    android:gravity="start"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/et_pd_mobile"
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:autofillHints="Name"
+                    android:background="@drawable/ic_field_background"
+                    android:drawablePadding="12dp"
+                    android:gravity="start"
+                    android:hint="Mobile Number"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="State"
+                    android:textSize="16sp"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:layout_gravity="center"
+                    android:gravity="start"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+                <Spinner
+                    android:id="@+id/spinner_state"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/ic_field_background"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="City"
+                    android:textSize="16sp"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:layout_gravity="center"
+                    android:gravity="start"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+                <Spinner
+                    android:id="@+id/spinner_dist"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/ic_field_background"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:text="Pincode"
+                    android:textSize="16sp"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:layout_gravity="center"
+                    android:gravity="start"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/et_pd_pincode"
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:autofillHints="Name"
+                    android:background="@drawable/ic_field_background"
+                    android:drawablePadding="12dp"
+                    android:gravity="start"
+                    android:hint="Pincode"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:maxLines="1"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Address"
+                    android:padding="10dp"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"/>
+
+                <EditText
+                    android:id="@+id/et_pd_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_gravity="start"
+                    android:autofillHints="Name"
+                    android:background="@drawable/ic_field_background"
+                    android:drawablePadding="12dp"
+                    android:gravity="start"
+                    android:hint="Address"
+                    android:inputType="textMultiLine"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_nextToBankDtl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Next"
+                android:textAllCaps="false"
+                android:layout_gravity="right"
+                android:layout_marginTop="25dp"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
